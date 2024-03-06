@@ -15,27 +15,27 @@ import learning from "./assets/learning.png"
 function App() {
   const cardData = [
     {
-      name: "David Heidari",
-      titel: "Student",
-      content: "En engagerad IT-student tillbringar mycket tid med att lära sig nya teknologier.",
+      name: "Superman",
+      titel: "Superhjälte",
+      content: "Superman, när han inte räddar världen, njuter av att flyga genom skyn, utforska rymden och använda sina krafter för att hjälpa människor i nöd.",
       profile: profile,
     },
     {
-      name: "Sofie Kleberg",
-      titel: "Student",
-      content: "Sofie gillar att designa, äta gott mat, bada och vara på stranden.",
+      name: "Batman",
+      titel: "Rik",
+      content: "Batman tillbringar sina nätter med att lösa gåtor och bekämpa brott i Gothams skuggor, en hobby som drivs av hans önskan om rättvisa.",
       profile: tele,
     },
     {
-      name: "Matilda",
-      titel: "Förskolelärare",
-      content: "Matilda tycker om att äta godis, shoppa på secondhand och läsa bok.",
+      name:"Cat Woman",
+      titel: "RAARRR",
+      content: "Catwoman ägnar sig åt akrobatik och inbrott, en passion för äventyr och att utmana sina gränser, alltid balanserande på lagens gräns.",
       profile: math,
     },
     {
-      name: "Kalle",
-      titel: "Sjuksköterska",
-      content: "Kalle gilalr att träna på gymmet och hänga med vänner och spela tv-spel.",
+      name: "Hulk Smash",
+      titel: "Smash",
+      content: "Hulk, trots sin vilda natur, hittar lugn i ensamheten, ofta söker han frid i avlägsna och orörda naturområden långt från civilisationens kaos.",
       profile: learning,
     }
 

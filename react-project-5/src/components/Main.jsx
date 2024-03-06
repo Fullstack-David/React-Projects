@@ -1,5 +1,4 @@
 
-
 const Main = ({ cards}) => {
   return (
     
