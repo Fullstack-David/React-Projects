@@ -47,7 +47,8 @@
 .navbar,
 .header,
 .main,
-.footer {
+.footer,
+.person {
   background: lightblue;
   padding: 1rem;
 }
