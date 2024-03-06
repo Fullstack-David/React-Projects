@@ -1,6 +1,6 @@
     
 const Greeting = (isLoggedIn) => {
-    const name = "David";
+    const name = "Sofie";
     // const isLoggedIn = true;
     return (
         <div>

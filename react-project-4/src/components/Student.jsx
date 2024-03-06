@@ -1,10 +1,11 @@
 // Destructring method
 import PropTypes from "prop-types";
-
+import profile from "../assets/profile.png"
 
 const Student = ({ name, age, isStudent }) => {
   return (
     <div className="student">
+      <img className="card-img" src={profile} alt="profile-picture" />
       <h1>Name: {name}</h1>
       <h3>Age: {age}</h3>
       <h4>Student: {isStudent  ? "Yes" : "No"}</h4>

@@ -1,10 +1,10 @@
 import profile from "../assets/profile.png";
 import cameleont from "../assets/Kameleont.jpg"
-import office from "../assets/OfficeGirl.jpg";
-import profilePic from "../assets/profile-pic.png";
+import office from "../assets/office.jpg";
+import profilePic from "../assets/myProfile.png";
 
 
-const Card = ({name, age, content}) => {
+const Card = ({name, age, content, img}) => {
   return (
     <div className='card'>
       <img className="card-img" src={office} alt="profile-picture" />
