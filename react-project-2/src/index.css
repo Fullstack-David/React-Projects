@@ -74,8 +74,8 @@ a {
   margin: 10px;
   text-align: center;
   max-width: 250px;
+  max-height: auto;
   display: inline-block;
-  max-height: 300px;
 }
 
 .card .card-img {
@@ -94,8 +94,12 @@ a {
 }
 
 .card .card-titel {
-  margin-top: 0;
+  margin: 0;
 }
 .card .card-name {
+  margin: 0;
+}
+
+.card-para {
   margin: 0;
 }

@@ -15,8 +15,10 @@ function App() {
   const cardData = [
     {
       name: "Anna",
+      age: 30,
       titel: "Student",
-      content: "Anna is studying art",
+      isStudent: true,
+      content: "Anna is studying art and she likes it alot.",
       profile: profile
     },
     {
