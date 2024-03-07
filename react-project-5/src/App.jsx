@@ -1,5 +1,4 @@
 
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
@@ -16,9 +15,10 @@ function App() {
   const cardData = [
     {
       name: "Superman",
-      titel: "Superhjälte",
+      titel: "Hältarnas hjälte",
       content: "Superman, när han inte räddar världen, njuter av att flyga genom skyn, utforska rymden och använda sina krafter för att hjälpa människor i nöd.",
       profile: profile,
+      
     },
     {
       name: "Batman",
@@ -45,7 +45,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Main cards={cardData} />
+      <Main cards={cardData}/>
       <Footer />
     </>
   );
