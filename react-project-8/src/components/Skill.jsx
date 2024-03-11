@@ -17,11 +17,14 @@ export default function Skill() {
 
 
      return (
-         <div>
+         <div className="div-container">
              <h2>My Skills</h2>
+             <hr />
              <ul>
                  {skills.map((skill, index) => (
-                     <li key={index}
+                     <li
+                         className="checkmark"
+                         key={index}
                          onDoubleClick={() =>handleRemoveSkill(index)}>
                       {skill}
                      </li>
@@ -30,7 +33,7 @@ export default function Skill() {
              <input
                  id="skillInput"
                  type="text"
-                 placeholder="Enter skill"
+                 placeholder="Enter a skill"
              />
              <button onClick={handleAddSkill}>Add skill</button>
           

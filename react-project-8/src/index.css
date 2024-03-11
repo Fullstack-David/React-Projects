@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.div-container {
+  border: 1px solid;
+  padding: 1rem;
+  max-width: 20%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#skillInput {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 20px 10px 0 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#skillInput::placeholder {
+  font-size: 1.2rem;
+  text-align: center;
+}
+button {
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: #0275d8;
+  color: white;
+  margin-top: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.checkmark::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.checkmark {
+  padding: 5px 0 0 5px;
+  list-style-type: none;
+  font-size: 1.3rem;
+}
