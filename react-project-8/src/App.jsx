@@ -10,7 +10,7 @@ function App() {
     <>
       <h1>Måndag 11 mars</h1>
       {progSkills.length > 0 && <Skill items={progSkills} setItems={setProgSkills} />}<br />
-      <Skill items={foodSkills} setItems={setFoodSkills} />
+      {/* <Skill items={foodSkills} setItems={setFoodSkills} /> */}
       <Computer/> 
       <ArrayOfObjects />
     </>
