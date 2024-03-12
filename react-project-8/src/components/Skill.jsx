@@ -1,43 +1,48 @@
 import { useState } from "react";
+import PropTypes from "prop-types"
 
-export default function Skill() {
-    const [skills, setSkills] = useState(["JavaScript", "TypeScript", "React"])
+export default function Skill({items, setItems}) {
+    const [inputValue, setInputValue] = useState("")
  
     // Add skills
     function handleAddSkill(e) {
-        const newSkill = document.getElementById("skillInput").value;
-        document.getElementById("skillInput").value = "";
-        setSkills((prevSkills)=>[...prevSkills,newSkill]);       
+        setItems((prevSkills)=>[...prevSkills,inputValue]);
+        // setInputValue("")       
     }
 
     // Remove skills
     function handleRemoveSkill(index) {
-        setSkills(skills.filter((skill, i) => i !== index))
+        setItems(items.filter((_, i) => i !== index))
     }
-
-
      return (
          <div className="div-container">
-             <h2>My Skills</h2>
+             <h2 className="skills-h2">My IT-Skills</h2>
              <hr />
              <ul>
-                 {skills.map((skill, index) => (
+                 {items.map((item, index) => (
                      <li
                          className="checkmark"
                          key={index}
                          onDoubleClick={() =>handleRemoveSkill(index)}>
-                      {skill}
+                      {item}
                      </li>
                  ))}
              </ul>
              <input
+                 className="skills-input"
                  id="skillInput"
                  type="text"
                  placeholder="Enter a skill"
+                 value={inputValue}
+                 onChange={(e) => setInputValue(e.target.value)}
              />
-             <button onClick={handleAddSkill}>Add skill</button>
+             <button onClick={handleAddSkill}>Add a skill</button>
           
          </div>
      );
+}
+
+Skill.PropTypes = {
+    items: PropTypes.arrayOf(PropTypes.string),
 }
 
