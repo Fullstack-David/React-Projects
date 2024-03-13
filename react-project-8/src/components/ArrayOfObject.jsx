@@ -39,16 +39,31 @@ const ArrayOfObject = ({ items }) => {
             <ul>
                 {computers.map((computer, index) =>
                 (<li key={index} onDoubleClick={() => handleRemoveComputer(index)}>
-                    Year:{computer.year}
-                    Brand:{computer.brand}
-                    Model:{computer.model}
+                    Year: {computer.year} <br />
+                    Brand: {computer.brand} <br />
+                    Model: {computer.model}
                 </li>))}
                 
             </ul>
-            <input className="array-input" type="number" value={computerYear} onChange={handleYearchange}/>
-            <input className="array-input" type="text" value={computerBrand} onChange={handleBrandchange} placeholder="Enter computer brand"/>
-            <input className="array-input" type="text" value={computerModel} onChange={handleModelchange} placeholder="Enter computer model" />
-            <button className="array-button" onClick={handleAddComputer}>Add a new computer</button>
+            <input
+                className="array-input"
+                type="number"
+                value={computerYear}
+                onChange={handleYearchange} />
+            <input
+                className="array-input"
+                type="text"
+                value={computerBrand}
+                onChange={handleBrandchange}
+                placeholder="Enter computer brand" />
+            <input
+                className="array-input"
+                type="text" value={computerModel}
+                onChange={handleModelchange}
+                placeholder="Enter computer model" />
+            <button
+                className="array-button"
+                onClick={handleAddComputer}>Add a new computer</button>
         </div>
     );
 }

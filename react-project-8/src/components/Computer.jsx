@@ -5,7 +5,7 @@ const Computer = () => {
     const [computer, setComputer] = useState({
         year: 2020,
         brand: "Apple",
-        model: "Macbook air",        
+        model: "Macbook Air",        
     })
     // Spread operator skapar en kopia av den nursprungliga 
     // year: 2020,
@@ -25,10 +25,27 @@ const Computer = () => {
 
     return (
         <div className='div-div-container'>
-            <p className='computer-para'>My computer is a {computer.year} {computer.brand} {computer.model}</p>
-            <input className="input-element" type="number" value={computer.year} onChange={handleYearChange}/><br/>
-            <input className="input-element" type="text" value={computer.brand} onChange={handleBrandChange}/><br />
-            <input className="input-element" type="text" value={computer.model} onChange={handleModelChange}/><br />
+            <p
+                className='computer-para'>My computer is a {""}
+                {computer.year} {""}  
+                {computer.brand} {""}
+                {computer.model} 
+            </p>
+            <input
+                className="input-element"
+                type="number"
+                value={computer.year}
+                onChange={handleYearChange} /><br />
+            <input
+                className="input-element"
+                type="text"
+                value={computer.brand}
+                onChange={handleBrandChange} /><br />
+            <input
+                className="input-element"
+                type="text"
+                value={computer.model}
+                onChange={handleModelChange} /><br />
         </div>
     );
 }
