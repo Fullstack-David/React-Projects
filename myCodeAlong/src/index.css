@@ -12,39 +12,51 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("https://images.unsplash.com/photo-1623265300459-dfc7609a0a55?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
-  background-color: black;
-  color: white;
+  background-color: skyblue;
 }
 
-/* .div-container .background-img {
-  background-image: url(./assets/profile.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  opacity: 0.4;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: skyblue;
+}
+
 .App {
   height: 100vh;
   width: 100%;
   max-width: 500px;
-  border: 1px solid #007bff;
-  border-radius: 10px;
-  display: flex;
+  /* border: 1px solid mediumblue; */
   margin: auto;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: aquamarine;
 }
+
 header {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 10px;
   width: 100%;
-  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  text-align: center;
+  background-color: mediumblue;
+  color: aliceblue;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
+
 main {
   width: 100%;
   flex: 1;
@@ -54,14 +66,14 @@ main {
   align-items: center;
   overflow-y: auto;
 }
+
 footer {
   width: 100%;
   padding: 0.25em;
-  background-color: #808080;
+  background-color: mediumblue;
   color: aliceblue;
   display: grid;
   place-content: center;
-  border-radius: 5px;
 }
 
 ul {
@@ -152,6 +164,7 @@ button {
   border-radius: 0.25rem;
   padding: 0.5rem;
   font-size: 1rem;
+  background-color: aliceblue;
   color: mediumblue;
   cursor: pointer;
   border: none;
@@ -160,7 +173,7 @@ button {
 button:focus,
 button:hover {
   color: white;
-  /* background-color: limegreen; */
+  background-color: limegreen;
   outline: none;
 }
 

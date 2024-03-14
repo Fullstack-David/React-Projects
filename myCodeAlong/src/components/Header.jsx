@@ -1,12 +1,11 @@
 
 
-export default function Header ({titel}){
+export default function Header({title}){
     return (
         <header>
             <h1>
-                {titel}
+                {title}
             </h1>
-          
         </header>
     );
 }

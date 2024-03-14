@@ -14,13 +14,12 @@ function App() {
 
   const setAndSaveItems = (newItems) => {
     setItems(newItems);
-    localStorage.setItem("shoppinglIST", JSON.stringify(newItems));
+    localStorage.setItem("shoppinglist", JSON.stringify(newItems));
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addItem(newItem);
-    console.log("Submitet")    
   }
 
   const addItem = (item) => {
@@ -32,7 +31,7 @@ function App() {
   }
   
   const handleCheck = (id) => {
-    // console.log(`id: ${id}`)
+    
     const listItems = items.map((item) =>
         item.id === id ? { ...item, checked: !item.checked } : item
     );
@@ -42,8 +41,7 @@ function App() {
   const handleDelete = (id) => {
     const listItems = items.filter(item => item.id !== id)
     setItems(listItems);
-    localStorage.setItem("shoppinglIST", JSON.stringify(listItems));
-    console.log(`id: ${id}`)
+   
   }
   
   
@@ -55,7 +53,10 @@ function App() {
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
-      <SearchItem search={ search} setSearch={setSearch} />
+      <SearchItem
+        search={search}
+        setSearch={setSearch}
+      />
       <Content
         items={items.filter((item) => 
           item.item.toLowerCase().includes(search.toLowerCase()))}

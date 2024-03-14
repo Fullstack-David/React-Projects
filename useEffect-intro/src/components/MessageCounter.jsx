@@ -14,13 +14,14 @@ export default function MessageCounter() {
 
 
     function handleColor() {
-    setColor((prevColor) => (prevColor === "green" ? "red" : "green"))
+    setColor((prevColor) => (prevColor === "green" ? "white" : "green"))
 }
 
     return (
         <div className="message">
-            <p style={{ color: color }}>Du har {count}
-                nya meddelanden och färgen är {color}
+            <p style={{ color: color }}>
+                Du har { count } <span></span>
+                 nya meddelanden och färgen är {color}
             </p>
             <button className="message-btn" onClick={handleColor}>Ändra färg</button>
             <button className="message-btn"
