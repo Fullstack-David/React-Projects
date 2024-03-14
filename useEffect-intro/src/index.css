@@ -1,0 +1,72 @@
+body {
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 80%;
+  padding: 1rem;
+  background-color: skyblue;
+}
+.App {
+  background-color: rgb(48, 185, 198);
+  padding: 1rem;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.timer {
+  font-size: 1.3rem;
+  background-color: #28a745;
+  max-width: 250px;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.message {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.fetch-data {
+  text-align: center;
+}
+
+.dog-pic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dog-pic img {
+  width: 300px;
+  height: 200px;
+  align-self: center;
+  border-radius: 10px;
+}
+
+.dog-pic button {
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  align-self: center;
+  background-color: #28a745;
+  color: white;
+}
+
+.message-btn {
+  padding: 10px 12px;
+  border: none;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #0275d8;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+}

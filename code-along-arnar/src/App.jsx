@@ -20,8 +20,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     addItem(newItem);
-    console.log("Submitet")
-    
+    console.log("Submitet")    
   }
 
   const addItem = (item) => {
@@ -40,12 +39,12 @@ function App() {
     setAndSaveItems(listItems);   
 }
 
-const handleDelete = (id) => {
+  const handleDelete = (id) => {
     const listItems = items.filter(item => item.id !== id)
     setItems(listItems);
     localStorage.setItem("shoppinglIST", JSON.stringify(listItems));
     console.log(`id: ${id}`)
-}
+  }
   
   
   return (
