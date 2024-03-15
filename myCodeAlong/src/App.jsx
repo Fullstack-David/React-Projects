@@ -21,12 +21,15 @@ export default function App() {
     e.preventDefault();
     addItem(newItem);
     
+    
   }
   function addItem(item) {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item}
     const listItems = [...items, myNewItem];
     setAndSaveItems(listItems);
+     
+
 }
 
   function handleCheck(id) {
