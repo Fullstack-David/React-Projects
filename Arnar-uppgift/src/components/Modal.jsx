@@ -6,13 +6,13 @@ export default function Modal({setIsOpen}) {
     //  const [isOpen, setIsOpen] = useState(false);
   
   function handleBtn() {
-  setIsOpen(false)
+    setIsOpen(false)
   }
     
 
   return (
-    <>
-      <div className="darkBG" onClick={() => handleBtn>
+    
+      <div className="darkBG" onClick={() => handleBtn}>
         <div className="centered">
           <div className="modal">
             <div className="modalHeader">
@@ -39,6 +39,7 @@ export default function Modal({setIsOpen}) {
           </div>
         </div>
       </div>
-    </>
+    
   );
+  
 }

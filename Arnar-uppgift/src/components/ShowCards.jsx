@@ -41,7 +41,7 @@ export default function ShowCards({items, setItems, isOpen, setIsOpen}) {
         />
       
       </div>
-      <Modal/>
+      
         <Modal/>
       <main>
         <button className='primaryBtn' onClick={() => setIsOpen(true)}>

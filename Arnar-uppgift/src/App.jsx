@@ -14,13 +14,9 @@ export default function App() {
     <>
       <h1 className='div-container-header'>The Board App</h1>
       <ShowCards items={items} setItems={setItems} />
-      {/* <Modal/>
-      <main>
-        <button className='primaryBtn' onClick={() => setIsOpen(true)}>
-          Open modal
-        </button>
-        {isOpen && <Modal setIsOpen={setIsOpen}/>}
-      </main> */}
+      <Modal />
+     
+    
      
       
     </>
