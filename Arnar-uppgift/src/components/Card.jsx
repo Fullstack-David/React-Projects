@@ -2,11 +2,10 @@ import { useState } from "react";
 import "./Card.css"
 
 import ListItem from "./ListItem";
-import Column from "./Column";
 
 export default function Card({ title, bgColor, color, items, setItems }) {
   
-  const [addTask, setAddTask] = useState([]);
+  // const [addTask, setAddTask] = useState([]);
 
   
   // function handleAddTask(e) {

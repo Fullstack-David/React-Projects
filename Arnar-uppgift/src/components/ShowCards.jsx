@@ -1,17 +1,19 @@
 import Card from "./Card"
-import ListItem from "./ListItem"
 import Column from "./Column"
+import Modal from "./Modal";
+
 
 
 export default function ShowCards({items, setItems}) {
   return (
-    <div className='div-container'>
+    <>
+      <div className='div-container'>
         <Card
-          title= "Todo"
+          title="Todo"
           bgColor="#D3D3D3"
           items={items}
           setItems={setItems}
-      />
+        />
   
         {/* <Card
           title= "Doing"
@@ -27,17 +29,19 @@ export default function ShowCards({items, setItems}) {
           items={items}
           setItems={setItems}
       /> */}
-      <Column
-        title="Doing"
-        bgColor= "#FCB711"
-        color="white"
-      />
-       <Column
-        title= "Done"
-        bgColor= "#00873D"
-        color="white"
-      />
+        <Column
+          title="Doing"
+          bgColor="#FCB711"
+          color="white"
+        />
+        <Column
+          title="Done"
+          bgColor="#00873D"
+          color="white"
+        />
       
       </div>
-  )
+      <Modal/>
+    </>
+  );
 }

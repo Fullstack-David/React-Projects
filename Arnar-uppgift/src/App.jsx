@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import "./components/Card.css"
 
+
 import ShowCards from './components/ShowCards';
-import ListItem from './components/ListItem';
-import OpenInput from "./components/OpenInput";
-import Column from './components/Column';
+
 
 export default function App() {
   const [items, setItems] = useState([]);
