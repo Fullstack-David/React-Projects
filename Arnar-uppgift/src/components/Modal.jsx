@@ -2,40 +2,31 @@
 import { RiCloseLine } from "react-icons/ri";
 import "./Modal.css"
 
-export default function Modal({setIsOpen}) {
-    //  const [isOpen, setIsOpen] = useState(false);
+export default function Modal({isOpen,setIsOpen}) {
+ if (!isOpen) return null;
   
-  function handleBtn() {
-    setIsOpen(false)
+  
+  function handleCloseBtn(e) {
+    e.stopPropagation(); // Förhindrar event-bubbling
+    setIsOpen(false);
+    console.log("closeing modal")
   }
     
 
   return (
     
-      <div className="darkBG" onClick={() => handleBtn}>
-        <div className="centered">
+      <div className="darkBG" onClick={() => setIsOpen(false)}>
+      <div className="centered" onClick={(e) => e.stopPropagation()}>
           <div className="modal">
             <div className="modalHeader">
-              <h5 className="heading">Dialog</h5>
+            <h5 className="heading">Dialog</h5>
             </div>
-            <button className="closeBtn" onClick={() => handleBtn}>
-              <RiCloseLine style={{ marginBottom: "-3px" }} />
+            <button className="closeBtn" onClick={handleCloseBtn} >
+            <RiCloseLine />          
             </button>
             <div className="modalContent">
-              Are you sure you want to delete the item?
-            </div>
-            <div className="modalActions">
-              <div className="actionsContainer">
-                <button className="deleteBtn" onClick={() => handleBtn}>
-                  Delete
-                </button>
-                <button className="cancelBtn" onClick={() => handleBtn}>
-                  Cancel
-                </button>
-
-              </div>
-            </div>
-
+              Här ska li-listan visas!!!
+            </div>           
           </div>
         </div>
       </div>

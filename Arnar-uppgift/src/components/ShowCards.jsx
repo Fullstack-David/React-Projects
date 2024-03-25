@@ -1,10 +1,11 @@
 import Card from "./Card"
 import Column from "./Column"
 import Modal from "./Modal";
+import ListItem from "./ListItem";
 
 
-
-export default function ShowCards({items, setItems, isOpen, setIsOpen}) {
+export default function ShowCards({ items, setItems, isOpen, setIsOpen}) {
+  
   return (
     <>
       <div className='div-container'>
@@ -14,21 +15,6 @@ export default function ShowCards({items, setItems, isOpen, setIsOpen}) {
           items={items}
           setItems={setItems}
         />
-  
-        {/* <Card
-          title= "Doing"
-          bgColor= "#FCB711"
-          color="white"
-          items={items}
-          setItems={setItems}
-        />
-        <Card
-          title= "Done"
-          bgColor= "#00873D"
-          color="white"
-          items={items}
-          setItems={setItems}
-      /> */}
         <Column
           title="Doing"
           bgColor="#FCB711"
@@ -42,13 +28,8 @@ export default function ShowCards({items, setItems, isOpen, setIsOpen}) {
       
       </div>
       
-        <Modal/>
-      <main>
-        <button className='primaryBtn' onClick={() => setIsOpen(true)}>
-          Open modal
-        </button>
-        {isOpen && <Modal setIsOpen={setIsOpen}/>}
-      </main>
+      <Modal value={false} isOpen={isOpen} setIsOpen={setIsOpen}/>
+
     </>
   );
 }

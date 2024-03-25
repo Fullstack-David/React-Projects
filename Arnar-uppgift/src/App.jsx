@@ -3,22 +3,23 @@ import "./components/Card.css"
 import "./index.css"
 
 import ShowCards from './components/ShowCards';
-import Modal from './components/Modal';
 
 
 export default function App() {
   const [items, setItems] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <>
       <h1 className='div-container-header'>The Board App</h1>
-      <ShowCards items={items} setItems={setItems} />
-      <Modal />
-     
-    
-     
-      
+      <ShowCards
+        
+        items={items}
+        setItems={setItems}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />    
     </>
   );
 }
