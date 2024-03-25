@@ -4,7 +4,7 @@ import Modal from "./Modal";
 
 
 
-export default function ShowCards({items, setItems}) {
+export default function ShowCards({items, setItems, isOpen, setIsOpen}) {
   return (
     <>
       <div className='div-container'>
@@ -42,6 +42,13 @@ export default function ShowCards({items, setItems}) {
       
       </div>
       <Modal/>
+        <Modal/>
+      <main>
+        <button className='primaryBtn' onClick={() => setIsOpen(true)}>
+          Open modal
+        </button>
+        {isOpen && <Modal setIsOpen={setIsOpen}/>}
+      </main>
     </>
   );
 }
