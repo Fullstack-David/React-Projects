@@ -1,31 +1,20 @@
 import { useState } from 'react'
+import "./components/Card.css"
 
-import Card from './components/Card'
-
+import ShowCards from './components/ShowCards';
+import ListItem from './components/ListItem';
+import OpenInput from "./components/OpenInput";
+import Column from './components/Column';
 
 export default function App() {
-  
+  const [items, setItems] = useState([]);
 
   return (
     <>
       <h1 className='div-container-header'>The Board App</h1>
-      <div className='div-container'>
-        <Card
-          title="Todo"
-          bgColor="#D3D3D3"
-          
-          // addTask={addTask}
-          // setAddask={setAddTask}
-        />
-        <Card title="Doing"
-          bgColor="#FCB711"
-          color="white"
-        />
-        <Card title="Done"
-          bgColor="#00873D"
-          color="white"
-        />
-      </div>
+      <ShowCards items={items} setItems={setItems} />
+     
+      
     </>
   );
 }
