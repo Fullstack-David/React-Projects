@@ -1,11 +1,8 @@
-import { useState } from "react";
 import "./Card.css"
-import Modal from "./Modal";
-
 import ListItem from "./ListItem";
 
-export default function Card({ title, bgColor, color, items, setItems, isOpen, setIsOpen }) {
-  
+export default function Card({ title, bgColor, color, items, setItems, isOpen, setIsOpen, activeItem, setActiveItem}) {
+  //console.log('setActiveItem i App:', setActiveItem);
   return (
     <div className="card">   
       <div className="card-content">
@@ -13,7 +10,15 @@ export default function Card({ title, bgColor, color, items, setItems, isOpen, s
           style={{ backgroundColor: bgColor, color: color }}>{title}
         </h2>         
         
-        <ListItem items={items} setItems={setItems} isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <ListItem
+          items={items}
+          setItems={setItems} 
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+        />
+        
       </div>
     </div>
   );

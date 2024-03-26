@@ -1,16 +1,17 @@
-
 import { RiCloseLine } from "react-icons/ri";
 import "./Modal.css"
 
-export default function Modal({isOpen,setIsOpen}) {
+
+export default function Modal({item, isOpen, setIsOpen}) {
  if (!isOpen) return null;
   
   
   function handleCloseBtn(e) {
     e.stopPropagation(); // Förhindrar event-bubbling
     setIsOpen(false);
-    console.log("closeing modal")
+    
   }
+  // console.log('setActiveItem i App:', setActiveItem);
     
 
   return (
@@ -25,7 +26,8 @@ export default function Modal({isOpen,setIsOpen}) {
             <RiCloseLine />          
             </button>
             <div className="modalContent">
-              Här ska li-listan visas!!!
+            <p>{item}</p>
+            
             </div>           
           </div>
         </div>
