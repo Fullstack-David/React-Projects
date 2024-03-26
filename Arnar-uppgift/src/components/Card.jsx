@@ -1,7 +1,7 @@
 import "./Card.css"
 import ListItem from "./ListItem";
 
-export default function Card({ title, bgColor, color, items, setItems, isOpen, setIsOpen, activeItem, setActiveItem}) {
+export default function Card({ title, bgColor, color, items, setItems, isOpen, setIsOpen, activeItem, setActiveItem, headerTitle}) {
   //console.log('setActiveItem i App:', setActiveItem);
   return (
     <div className="card">   
@@ -12,11 +12,12 @@ export default function Card({ title, bgColor, color, items, setItems, isOpen, s
         
         <ListItem
           items={items}
-          setItems={setItems} 
+          setItems={setItems}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           activeItem={activeItem}
           setActiveItem={setActiveItem}
+          
         />
         
       </div>

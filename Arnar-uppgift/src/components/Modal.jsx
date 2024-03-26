@@ -26,7 +26,7 @@ export default function Modal({item, isOpen, setIsOpen}) {
             <RiCloseLine />          
             </button>
             <div className="modalContent">
-            <p>{item}</p>
+            {item}
             
             </div>           
           </div>

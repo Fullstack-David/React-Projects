@@ -1,12 +1,13 @@
 import Card from "./Card"
 import Column from "./Column"
 import Modal from "./Modal";
+import ListItem from "./ListItem";
 
 
 
 export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeItem, setActiveItem}) {
 
-  
+  // const [headerTitle, setHeaderTitle] = useState("")
   return (
     <>
       <div className='div-container'>
@@ -19,6 +20,7 @@ export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeIt
           setIsOpen={setIsOpen}
           activeItem={activeItem}
           setActiveItem={setActiveItem}
+          
         />
         <Column
           title="Doing"
@@ -39,8 +41,6 @@ export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeIt
       {/* denna ska visa min modal */}
       
       <Modal
-        // activeItem={activeItem}
-        // setActiveItem={setActiveItem}
          activeItem={activeItem}
         value={false}
         isOpen={isOpen}
