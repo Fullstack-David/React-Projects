@@ -14,7 +14,7 @@ export default function App() {
     <>
       <h1 className='div-container-header'>The Board App</h1>
       <ShowCards
-        
+         
         items={items}
         setItems={setItems}
         isOpen={isOpen}
