@@ -1,13 +1,22 @@
 import Card from "./Card"
 import Column from "./Column"
 import Modal from "./Modal";
-import ListItem from "./ListItem";
 
 
 
-export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeItem, setActiveItem, itemContext, setItemContext}) {
 
-  // const [headerTitle, setHeaderTitle] = useState("")
+export default function ShowCards({ items,
+  setItems,
+  isOpen,
+  setIsOpen,
+  activeItem,
+  setActiveItem,
+  itemContext,
+  setItemContext,
+  handleSubmit
+}) {
+
+  
   return (
     <>
       <div className='div-container'>
@@ -20,6 +29,7 @@ export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeIt
           setIsOpen={setIsOpen}
           activeItem={activeItem}
           setActiveItem={setActiveItem}
+          handleSubmit={handleSubmit}
           
         />
         <Column
@@ -38,8 +48,7 @@ export default function ShowCards({ items, setItems, isOpen, setIsOpen, activeIt
         />
       
       </div>
-      {/* denna ska visa min modal */}
-      
+      {/* denna ska visa min modal */}    
       <Modal
         activeItem={activeItem}
         itemContext={itemContext}
