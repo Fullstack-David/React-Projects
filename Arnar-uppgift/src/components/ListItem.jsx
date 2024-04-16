@@ -1,58 +1,51 @@
-// DENNA KOMPONENTS ÄR BARA TILL MIN TODO-LISTA
-import { useState } from "react";
-import { BiPlusMedical } from "react-icons/bi";
-import { format } from "date-fns"
-import { sv } from "date-fns/locale";
-
+import { BiPlusMedical, BiTrash } from "react-icons/bi";
+import DraggableListItem from "./DraggableListItem";
    
-export default function ListItem({ items, setItems, setIsOpen, setActiveItem}) {
-        
-    const [newItem, setNewItem] = useState("");
-    
-   
-    function handleAddNewItem(e) {
-        const newItemObject = {
-            text: newItem,                              
-            createdAt: format(new Date(), "MMMM dd, yyyy - H:mm", { locale: sv })
-        };
-       
-        if (newItem !== "") {
-            setItems([...items, newItemObject])
-            setNewItem(""); 
-        }
-    }
-
-    function handleListItemClick(item) {
-        console.log(item)
-        setActiveItem(item)    
-        setIsOpen(true); // Öppnar modalen när en li-element klickas
-    }
-   
-
+export default function ListItem({ title, items,handleAddNewItem, newDescription, setNewDescription, newItem, setNewItem}) {
+             
     return (
         <ul>
-            {items.map((item, index) => (
-                <li
-                    className="li-list"
-                    id="liItem"
-                    key={index}
-                    onClick={() => handleListItemClick(item)}
-                >
-                    <h4>{item.text}</h4>
-                    {item.createdAt} 
-                </li>))}
-            <input
-                type="text"
-                value={newItem}
-                onChange={(e) => setNewItem(e.target.value)}
-            />
-            <div className="add-list">
-                <BiPlusMedical style={{ marginLeft: "1rem" }} />
-                <button onClick={handleAddNewItem}>
-                    Skapa ny uppgift
-                </button>
-            </div>
-        </ul>
-    );
-}
+            {/* li ska bara läggas i min Todo */}
+            {items.map((item) => ( 
+                 <DraggableListItem 
+                 key={item.id} 
+                 item={item} 
+                 handleListItemClick={handleListItemClick}
+               />
+               ))}
 
+            {/* Conditional rendering för att visa element baserat på Title */}
+            {title === "Todo" && (
+                <div className="input-group">
+                    
+                    <input
+                        style={{border:"none", borderBottom:"1px solid"}}
+                            name="newItem"
+                            placeholder="Titel"
+                            autoComplete="off"
+                            type="text"
+                            value={newItem}
+                            onChange={(e) => setNewItem(e.target.value)}
+                    />
+                    <hr />
+                    <textarea
+                        style={{marginBottom:"10px", padding:"10px", border: "none", width:"100%", marginLeft:0}}
+                            cols={53}
+                            rows={5}
+                            name="newDescription"
+                            placeholder="Beskrivning..."
+                            type="text"
+                            value={newDescription}
+                            onChange={(e) => setNewDescription(e.target.value)}
+                        />
+                        <div className="add-list">
+                            <BiPlusMedical style={{color:"white", cursor: "pointer" }}
+                                onClick={handleAddNewItem}
+                            />
+                            <span style={{color:"white", margin:"0 auto", cursor:"pointer"}} onClick={handleAddNewItem}>Skapa ny uppgift</span>
+                        </div>                    
+                </div>
+            )}
+        </ul>
+    );   
+}

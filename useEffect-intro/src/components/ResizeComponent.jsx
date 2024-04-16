@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 
 const ResizeComponent = () => {
@@ -7,11 +6,9 @@ const ResizeComponent = () => {
 
     useEffect(() => {
         window.addEventListener("resize", handleResize);
-        
-
+    
         return () => {
-            window.removeEventListener("resize", handleResize);
-            
+            window.removeEventListener("resize", handleResize);        
         }
     },[])
     

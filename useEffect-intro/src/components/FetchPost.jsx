@@ -1,10 +1,8 @@
-
 import { useState, useEffect } from "react";
 
 export default function FetchPost() {
     
     const [dataApi, setDataApi] = useState([]);
-
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -26,12 +24,11 @@ export default function FetchPost() {
         <div className="fetch-data">
             {loading ? (<p>Laddar data... </p>) : (
         <>
-            <h1>{dataApi.title}</h1>
+            <h3>{dataApi.title}</h3>
             <p>{dataApi.body}</p> 
         </>
         )}
-        </div>
-            
+        </div>            
     );
 }
 

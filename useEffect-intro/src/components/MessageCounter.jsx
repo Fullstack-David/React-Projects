@@ -6,12 +6,8 @@ export default function MessageCounter() {
 
     useEffect(() => {
         document.title = (` ${count} new messages ${color}`)
-        
-
         // return() => {document.title = "new game"}
-
     }, [count, color]);
-
 
     function handleColor() {
     setColor((prevColor) => (prevColor === "green" ? "white" : "green"))

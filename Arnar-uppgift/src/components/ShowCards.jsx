@@ -1,62 +1,42 @@
+import { useContext } from "react";
+import { useParams} from "react-router-dom";
 import Card from "./Card"
-import Column from "./Column"
 import Modal from "./Modal";
+import CardContext from "../context/CardContext";
 
 
-
-
-export default function ShowCards({ items,
-  setItems,
-  isOpen,
-  setIsOpen,
-  activeItem,
-  setActiveItem,
-  itemContext,
-  setItemContext,
-  handleSubmit
-}) {
-
+export default function ShowCards() {
+  const { items} = useContext(CardContext);
+  const titles = ["Todo", "Doing", "Done"];
+  const { columnName } = useParams();
+  const colomn = titles.filter(title => title === columnName);
   
   return (
     <>
       <div className='div-container'>
-        <Card
-          title="Todo"
-          bgColor="#D3D3D3"
-          items={items}
-          setItems={setItems}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          activeItem={activeItem}
-          setActiveItem={setActiveItem}
-          handleSubmit={handleSubmit}
-          
-        />
-        <Column
-          title="Doing"
-          bgColor="#FCB711"
-          color="white"
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
-        <Column
-          title="Done"
-          bgColor="#00873D"
-          color="white"
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
-      
+        {colomn.length === 1 ? (
+          colomn.map((title) =>
+            <Card
+              key={title}
+              title={title}
+              cardId={titles.indexOf(colomn[0])}
+              cardItems={items.filter(item => item.cardId === titles.indexOf(colomn[0]))}
+              titles={titles} />
+          )
+        ) : (
+          titles.map((title, index) => (
+            <Card
+              key={title}
+              title={title}
+              cardId={index}
+              cardItems={items.filter(item => item.cardId === index)}
+              titles={titles}
+            />
+          ))
+        )
+        }
       </div>
-      {/* denna ska visa min modal */}    
-      <Modal
-        activeItem={activeItem}
-        itemContext={itemContext}
-        setItemContext={setItemContext}
-        value={false}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen} /> 
-
+      <Modal />
     </>
   );
 }
