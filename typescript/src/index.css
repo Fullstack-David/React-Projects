@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: white; */
+}
+
+/* body {
+  background: black;
+} */
+h1 {
+  text-align: center;
+  margin: 3rem 0;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+  gap: 1rem;
+  margin: 0 auto;
+}
