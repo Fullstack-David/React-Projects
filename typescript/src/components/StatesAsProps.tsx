@@ -8,7 +8,7 @@ type ButtonProps = {
 const StatesAsProps = ({ count, setCount }: ButtonProps) => {
   return (
     <>
-      <button onClick={() => setCount(count + 1)}>{count}</button>
+      <button onClick={() => setCount(count + 1)}>StateAsProps: {count}</button>
     </>
   );
 };

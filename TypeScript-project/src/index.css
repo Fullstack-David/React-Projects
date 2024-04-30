@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 3rem auto;
+}
+.container {
+  border: 1px solid #007bff;
+  height: 90vh;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #007bff;
+}
+.header {
+  margin: 0 10rem;
+  border-left: 250px solid #d9f164;
+  border-right: 250px solid #d9f164;
+  text-align: center;
+  margin-top: 3rem;
+  border-radius: 10px;
+  color: #ffc107;
+  background-color: #007bff;
+}
+
+h1 .header::before,
+h1 .header::after {
+  content: "";
+  border-left: 20px solid black;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+}

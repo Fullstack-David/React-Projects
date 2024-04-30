@@ -12,10 +12,8 @@ function App() {
 
   return (
     <div className='App'>
-      {/* davids som står här måste skickas vidare exakt som 
-      det är annars kommer den inte att funka */}
       <ShopingList/> 
-       <Timer />
+      <Timer />
       <hr />
       <FetchPost />
       <hr />
@@ -25,7 +23,7 @@ function App() {
       <hr />
       <ResizeComponent />
       <hr />
-      <UdemyColtReact  alt1="🔥" alt2="🔥" alt3="🔥"/>
+      <UdemyColtReact  alt1="🔥" alt2="Win" alt3="🔥"/>
       <UdemyColtReact  alt1="🔥" alt2="No" alt3="🔥"/>
       
     </div>

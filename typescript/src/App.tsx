@@ -5,7 +5,7 @@ import FunctionAsProps from "./components/FunctionAsProps";
 import ObjectsAsStates from "./components/ObjectsAsStates";
 import StatesAsProps from "./components/StatesAsProps";
 import TypeEvent from "./components/TypeEvent";
-import ChildrenAsProps from "./ChildrenAsProps";
+// import ChildrenAsProps from "./ChildrenAsProps";
 import { User } from "./types/types";
 
 // EXERCISES
@@ -32,12 +32,13 @@ function App() {
       <Exercise1 name="David" age={30} />
       <Counter count={count} setCount={setCount} />
       <EventTypeScript />
+      {/* Yellow and  turkos*/}
       <Wrapper backgroundColor="#ffc107" color="#17a2b8">
         <h3>Hello Childreen</h3>
       </Wrapper>
-      {/* <div className="cards">
+      <div className="cards">
         <Button
-          backgroundColor="#28a745"
+          backgroundColor="#28a745" // Green
           fontSize="30px"
           fontFamily="Courier New"
           color="white"
@@ -45,21 +46,21 @@ function App() {
           borderRadius="10px"
           isRounded={true}
           padding={[8, 12]}
-        /> */}
+        />
 
-      {/* <FunctionAsProps
+        <FunctionAsProps
           handleClick={handleClick}
-          backgroundColor="#007bff"
+          backgroundColor="#007bff" //Blue
           color="white"
-        /> */}
-      {/* <ObjectsAsStates/>
+        />
+        <ObjectsAsStates />
         <StatesAsProps count={count} setCount={setCount} />
-        <TypeEvent /> */}
-      {/* hello david är en prop här nedan*/}
-      {/* <ChildrenAsProps backgroundColor="#ffc107" color="white">
+        <TypeEvent />
+        {/* hello david är en prop här nedan*/}
+        {/* <ChildrenAsProps backgroundColor="#ffc107" color="white">
           <h1>Hello David</h1>
-        </ChildrenAsProps>
-      </div> */}
+        </ChildrenAsProps> */}
+      </div>
     </>
   );
 }
